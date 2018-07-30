@@ -23,9 +23,11 @@ app.use(bodyParser.json({
 app.use(express.static("public"));
 
 // use promises with Mongo and connect to the database
-var databaseUrl = "news";
-mongoose.Promise = Promise; 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news";
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 // use handlebars

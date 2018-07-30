@@ -3,63 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MongoNews Scraper</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  <title>Tech News</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="/assets/js/app.js"></script>
 </head>
 
 <body>
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item button is-info is-outlined" href="/scrape">Scrape Stories
 
-          </a>
+  {{{ body }}}
 
-          <span class="navbar-burger burger" data-target="navbarMenu">
-            <span></span>
-          <span></span>
-          <span></span>
-          </span>
-        </div>
-        <div id="navbarMenu" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-active" href="/#news">
-              News
-            </a>
-            <a class="navbar-item" href="/articles">
-              JSON db
-            </a>
-            {{!-- <a class="navbar-item">
-              Notes
-            </a> --}}
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <section class="hero is-info is-medium is-bold">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title">
-          r/Webdev News Scraper
-        </h1>
-        <h2 class="subtitle">
-          Scraped stories from subreddit r/Webdev. Save notes for different articles you find interesting
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  {{{body}}}
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/app.js" id="handlebars-appjs" type=""></script>
 </body>
+
 </html>

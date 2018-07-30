@@ -1,0 +1,28 @@
+{{!-- //TODO: Include Summary and pick a better news source
+  --}}
+<section id="news">
+  <div class="tile is-vertical is-ancestor">
+    <div class="tile">
+      <article class="column is-multiline">
+        {{#each article}}
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <i class="fa fa-newspaper-o"></i>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h4>{{this.title}} </h4>
+                <p></p>
+                <div class="has-text-centered">
+                  <a class="button" href="{{this.link}}" target="_blank">Read</a><span>&nbsp;&nbsp;&nbsp;</span>
+
+                  <a class="button" href="/articles/{{this._id}}">Notes</a><span>&nbsp;&nbsp;&nbsp;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </article>
+    </div>
+  </div>
+</section>

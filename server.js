@@ -37,8 +37,8 @@ app.set("view engine", "handlebars");
 
 // Hook mongojs configuration to the db variable
 var db = require("./models");
-var Article = require("./models/article.js"),
-    Note = require("./models/note.js");
+var Article = require("./models/Article.js"),
+    Note = require("./models/Note.js");
 
 // get all articles from the database that are not saved
 app.get("/", function(req, res) {

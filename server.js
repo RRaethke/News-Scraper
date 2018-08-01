@@ -3,7 +3,7 @@ var express = require("express");
 var mongoose = require("mongoose");
 var request = require("request");
 var cheerio = require("cheerio");
-mongoose.connect("mongodb://heroku_cnd29cdp:e7rvoq6ojnuf5418enbsrvttle@ds159651.mlab.com:59651/heroku_cnd29cdp", {useMongoClient: true});
+//mongoose.connect("mongodb://heroku_cnd29cdp:e7rvoq6ojnuf5418enbsrvttle@ds159651.mlab.com:59651/heroku_cnd29cdp", {useMongoClient: true});
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var PORT = process.env.PORT || 3000;
@@ -27,7 +27,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news";
 
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-//mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI);
 
 // use handlebars
 app.engine("handlebars", exphbs({
@@ -49,7 +49,7 @@ app.get("/", function(req, res) {
       if (error) {
         console.log(error);
       } else {
-        res.render("index", {
+        res.render("index.handlebars", {
           articles: dbArticle
         });
       }

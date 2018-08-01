@@ -3,9 +3,9 @@ var express = require("express");
 var mongoose = require("mongoose");
 var request = require("request");
 var cheerio = require("cheerio");
+mongoose.connect(mongodb:heroku_cnd29cdp:e7rvoq6ojnuf5418enbsrvttle@ds159651.mlab.com:59651/heroku_cnd29cdp);
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-
 var PORT = process.env.PORT || 3000;
 
 // initialize Express
@@ -25,10 +25,9 @@ app.use(express.static("public"));
 // use promises with Mongo and connect to the database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news";
 
-// Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+//mongoose.connect(MONGODB_URI);
 
 // use handlebars
 app.engine("handlebars", exphbs({
@@ -57,7 +56,7 @@ app.get("/", function(req, res) {
     })
 })
 
-// use cheerio to scrape stories from TechCrunch and store them
+// use cheerio to scrape stories and store them
 app.get("/scrape", function(req, res) {
   request("https://techcrunch.com/", function(error, response, html) {
     // Load the html body from request into cheerio

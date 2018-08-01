@@ -3,7 +3,7 @@ var express = require("express");
 var mongoose = require("mongoose");
 var request = require("request");
 var cheerio = require("cheerio");
-mongoose.connect("mongodb://heroku_cnd29cdp:e7rvoq6ojnuf5418enbsrvttle@ds159651.mlab.com:59651/heroku_cnd29cdp");
+mongoose.connect("mongodb://heroku_cnd29cdp:e7rvoq6ojnuf5418enbsrvttle@ds159651.mlab.com:59651/heroku_cnd29cdp", {useMongoClient: true});
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var PORT = process.env.PORT || 3000;

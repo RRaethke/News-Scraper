@@ -1,9 +1,10 @@
 // export an object for all the models
 
-
+let note =  require("./note")
+let article = require("./article")
 
 
 module.exports = {
-  //Note: require("./note"),
-  Article: require("./article")
+  Note: note,
+  Article: article
 };
